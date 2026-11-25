@@ -1,10 +1,6 @@
 class Solution:
     def canAliceWin(self, nums: List[int]) -> bool:
-        double=0
-        single=0
-        for i in nums:
-            if i>=10:
-                single+=i
-            else:
-                double+=i
-        return False if single==double else True
+        single_digit = sum(n for n in nums if n < 10)
+        double_digit = sum(n for n in nums if n >= 10)
+
+        return single_digit != double_digit
