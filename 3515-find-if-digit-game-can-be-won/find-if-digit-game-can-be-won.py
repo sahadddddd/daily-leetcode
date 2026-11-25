@@ -7,7 +7,4 @@ class Solution:
                 single+=i
             else:
                 double+=i
-        if double>single or single>double:
-            return True
-        else:
-            return False
+        return False if single==double else True
